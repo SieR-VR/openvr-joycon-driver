@@ -26,6 +26,17 @@ namespace QuaternionHelper
         return result;
     }
 
+    vr::HmdQuaternion_t DivideQuaternion(const vr::HmdQuaternion_t& q1, const vr::HmdQuaternion_t& q2)
+    {
+        vr::HmdQuaternion_t result;
+        double q2dotq2 = q2.w * q2.w + q2.x * q2.x + q2.y * q2.y + q2.z * q2.z;
+        result.w = (q1.w * q2.w + q1.x * q2.x + q1.y * q2.y + q1.z * q2.z) / q2dotq2;
+        result.x = (q1.w * q2.x - q1.x * q2.w - q1.y * q2.z + q1.z * q2.y) / q2dotq2;
+        result.y = (q1.w * q2.y + q1.x * q2.z - q1.y * q2.w - q1.z * q2.x) / q2dotq2;
+        result.z = (q1.w * q2.z - q1.x * q2.y + q1.y * q2.x - q1.z * q2.w) / q2dotq2;
+        return result;
+    }
+
     vr::HmdQuaternion_t QuaternionFromMatrix(const vr::HmdMatrix34_t& m)
     {
         vr::HmdQuaternion_t result;

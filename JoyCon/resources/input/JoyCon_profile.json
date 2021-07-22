@@ -1,0 +1,80 @@
+{
+    "jsonid": "input_profile",
+    "controller_type": "joycon",
+    "legacy_binding": "{JoyCon}/input/legacy_bindings_JoyCon.json",
+    "input_bindingui_mode": "controller_handed",
+    "input_bindingui_left": {
+        "image": "{JoyCon}/icons/JoyConL.svg"
+    },
+    "input_bindingui_right": {
+        "image": "{JoyCon}/icons/JoyConR.svg"
+    },
+    "input_source": {
+        "/input/trigger": {
+            "type": "trigger",
+            "click": true,
+            "value": true,
+            "binding_image_point": [
+                78,
+                30
+            ],
+            "order": 1
+        },
+        "/input/system": {
+            "type": "button",
+            "click": true,
+            "binding_image_point": [
+                54,
+                305
+            ],
+            "order": 2
+        },
+        "/input/thumbstick": {
+            "type": "joystick",
+            "click": true,
+            "x": true,
+            "y": true,
+            "binding_image_point": [
+                78,                     
+                227
+            ],
+            "order": 3
+        },
+        "/input/a": {
+            "type": "button",
+            "click": true,
+            "binding_image_point": [
+                110,
+                111
+            ],
+            "order": 4
+        },
+        "/input/b": {
+            "type": "button",
+            "click": true,
+            "binding_image_point": [
+                79,
+                143
+            ],
+            "order": 5
+        },
+        "/input/x": {
+            "type": "button",
+            "click": true,
+            "binding_image_point": [
+                78,
+                80
+            ],
+            "order": 6
+        },
+        "/input/y": {
+            "type": "button",
+            "click": true,
+            "binding_image_point": [
+                47,
+                111
+            ],
+            "order": 7
+        }
+    }
+}

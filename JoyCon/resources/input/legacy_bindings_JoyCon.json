@@ -1,0 +1,161 @@
+{
+    "bindings": {
+        "/actions/legacy": {
+            "sources": [
+                {
+                    "inputs": {
+                        "pull": {
+                            "output": "/actions/legacy/in/right_axis1_value"
+                        }
+                    },
+                    "mode": "trigger",
+                    "path": "/user/hand/right/input/trigger"
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_axis1_press"
+                        }
+                    },
+                    "mode": "button",
+                    "path": "/user/hand/right/input/trigger"
+                },
+                {
+                    "inputs": {
+                        "pull": {
+                            "output": "/actions/legacy/in/left_axis1_value"
+                        }
+                    },
+                    "mode": "trigger",
+                    "path": "/user/hand/left/input/trigger"
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_axis1_press"
+                        }
+                    },
+                    "mode": "button",
+                    "path": "/user/hand/left/input/trigger"
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_system_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/right/input/system"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_system_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/left/input/system"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_axis0_press"
+                        },
+                        "position": {
+                            "output": "/actions/legacy/in/right_axis0_value"
+                        },
+                        "mode": "joystick",
+                        "path" : "/user/hand/right/input/joystick"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_axis0_press"
+                        },
+                        "position": {
+                            "output": "/actions/legacy/in/left_axis0_value"
+                        },
+                        "mode": "joystick",
+                        "path" : "/user/hand/left/input/joystick"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_a_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/left/input/a"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_b_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/left/input/b"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_x_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/left/input/x"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/left_y_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/left/input/y"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_a_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/right/input/a"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_b_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/right/input/b"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_x_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/right/input/x"
+                    }
+                },
+                {
+                    "inputs": {
+                        "click": {
+                            "output": "/actions/legacy/in/right_y_press"
+                        },
+                        "mode": "button",
+                        "path" : "/user/hand/right/input/y"
+                    }
+                }
+            ]
+        }   
+    },
+    "controller_type": "joycon",
+    "description": "Sanyay",
+    "name": "Default bindings for JoyCon"
+}

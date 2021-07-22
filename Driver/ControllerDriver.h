@@ -7,7 +7,7 @@
 class ControllerDriver : public vr::ITrackedDeviceServerDriver
 {
 public:
-    ControllerDriver(vr::ETrackedControllerRole controllerRole, std::string serialNumber);
+    ControllerDriver(vr::ETrackedControllerRole controllerRole, std::string serialNumber, int jslHandle);
     virtual ~ControllerDriver();
 
     virtual vr::EVRInitError Activate(vr::TrackedDeviceIndex_t unObjectId);
@@ -26,9 +26,29 @@ private:
     vr::TrackedDeviceIndex_t m_controllerId;
     vr::PropertyContainerHandle_t m_containerHandle;
     vr::ETrackedControllerRole m_controllerRole;
+
+    vr::VRInputComponentHandle_t m_triggerValueHandle;
+    vr::VRInputComponentHandle_t m_triggerPressedHandle;
+
+    vr::VRInputComponentHandle_t m_homeButtonHandle;
+
+    vr::VRInputComponentHandle_t m_joystickPressedHandle;
+    vr::VRInputComponentHandle_t m_joystickAxisXHandle;
+    vr::VRInputComponentHandle_t m_joystickAxisYHandle;
+
+    vr::VRInputComponentHandle_t m_buttonAHandle;
+    vr::VRInputComponentHandle_t m_buttonBHandle;
+    vr::VRInputComponentHandle_t m_buttonXHandle;
+    vr::VRInputComponentHandle_t m_buttonYHandle;
+
+    vr::VRInputComponentHandle_t m_triggerHapticHandle;
+
+    vr::HmdQuaternion_t m_calibrationOffset = { 1, 0, 0, 0 };
     
     vr::DriverPose_t m_pose;
     std::string m_serialNumber;
+
+    int m_jslHandle;
 };
 
 #endif
