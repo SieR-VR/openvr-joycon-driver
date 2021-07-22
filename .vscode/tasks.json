@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C++ Build",
+            "group": "build",
+            "command": "g++",
+            "args": [
+                "-shared",
+                "-o",
+                "${workspaceFolder}/bin/driver_AutoSaber.dll",
+                "-I${workspaceFolder}/include",
+                "${workspaceFolder}/Driver/ControllerDriver.cc",
+                "${workspaceFolder}/Driver/HeadsetDriver.cc",
+                "${workspaceFolder}/Driver/ServerDriver.cc",
+                "${workspaceFolder}/Driver/DriverFactory.cc",
+                "${workspaceFolder}/DriverLog/DriverLog.cc",
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Post Build Task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "copy '${workspaceFolder}/bin/driver_AutoSaber.dll' 'C:/Program Files (x86)/Steam/steamapps/common/SteamVR/drivers/AutoSaber/bin/win64/driver_AutoSaber.dll'",
+            "dependsOn": [
+                "C++ Build"
+            ]
+        }
+    ]
+}
