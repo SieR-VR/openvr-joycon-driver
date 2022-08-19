@@ -1,21 +1,21 @@
 #include <openvr_driver.h>
 #include <string.h>
 
-#include "ServerDriver.h"
+#include "provider.h"
 
-#define HMD_DLL_EXPORT extern "C" __attribute__((visibility("default")))
-#define HMD_DLL_IMPORT extern "C"
+#define HMD_DLL_EXPORT extern "C" __declspec(dllexport)
+#define HMD_DLL_IMPORT extern "C" __declspec(dllimport)
 
-ServerDriver g_serverDriverNull;
+Provider g_provider;
 
 HMD_DLL_EXPORT void *HmdDriverFactory(const char *pInterfaceName, int *pReturnCode)
 {
     if (strcmp(pInterfaceName, vr::IServerTrackedDeviceProvider_Version) == 0)
     {
-        return &g_serverDriverNull;
+        return &g_provider;
     }
 
-    if(pReturnCode)
+    if (pReturnCode)
         *pReturnCode = vr::VRInitError_Init_InterfaceNotFound;
 
     return nullptr;

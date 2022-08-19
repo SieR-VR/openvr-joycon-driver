@@ -1,11 +1,11 @@
-#ifndef SERVERDRIVER_H
-#define SERVERDRIVER_H
+#ifndef _PROVIDER_H_
+#define _PROVIDER_H_
 
 #include <openvr_driver.h>
 
-#include "ControllerDriver.h"
+#include "joycon_driver.h"
 
-class ServerDriver : public vr::IServerTrackedDeviceProvider
+class Provider : public vr::IServerTrackedDeviceProvider
 {
 public:
     virtual vr::EVRInitError Init(vr::IVRDriverContext *pDriverContext);
@@ -15,12 +15,12 @@ public:
     virtual bool ShouldBlockStandbyMode() { return false; }
     virtual void EnterStandby() {}
     virtual void LeaveStandby() {}
-private:
-    int numberOfJslControllers;
-    int *JslDeviceHandles;
 
-    ControllerDriver *m_LeftController;
-    ControllerDriver *m_RightController;
+    JoyconDriver *m_LeftController;
+    JoyconDriver *m_RightController;
+
+private:
+    bool m_bIsFirstRunFrame = true;
 };
 
 #endif
